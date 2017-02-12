@@ -175,25 +175,25 @@ bar {
   status_command i3status
   colors {
     separator #666666
-    background #222222
-    statusline #dddddd
-    focused_workspace #0088CC #0088CC #ffffff
+    background #282F39
+    statusline #ffffff
+    focused_workspace #1A8A74 #1A8A74 #ffffff
     active_workspace #333333 #333333 #ffffff
-    inactive_workspace #333333 #333333 #888888
+    inactive_workspace #1b2429 #282F39 #aaaaaa
     urgent_workspace #2f343a #900000 #ffffff
   }
 }
 
-client.focused #0088CC #0088CC #ffffff #dddddd
-client.focused_inactive #333333 #333333 #888888 #292d2e
-client.unfocused #333333 #333333 #888888 #292d2e
+client.focused #1A8A74 #1A8A74 #ffffff #dddddd
+client.focused_inactive #1a2327 #1a2327 #888888 #292d2e
+client.unfocused #1a2327 #1a2327 #888888 #292d2e
 client.urgent #2f343a #900000 #ffffff #900000
 
 focus_follows_mouse no
 # hide mouse cursor when not in use
 exec unclutter-xfixes &
 
-new_window pixel 2
+new_window pixel 3
 
 exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon
