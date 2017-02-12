@@ -154,20 +154,9 @@ call plug#begin("~/.config/nvim/plugged")
     Plug 'junegunn/fzf.vim'
       " fzf: fuzzy finder
       let g:fzf_nvim_statusline = 0 " disable statusline overwriting
-      nnoremap <silent> <leader>f :Files<CR>
-      nnoremap <silent> <leader>a :Buffers<CR>
-      nnoremap <silent> <leader>A :Windows<CR>
-      nnoremap <silent> <leader>; :BLines<CR>
-      nnoremap <silent> <leader>. :Lines<CR>
-      nnoremap <silent> <leader>o :BTags<CR>
-      nnoremap <silent> <leader>O :Tags<CR>
-      nnoremap <silent> <leader>? :History<CR>
       nnoremap <silent> <leader>/ :execute 'Ag ' . input('Ag/')<CR>
       nnoremap <silent> K :call SearchWordWithAg()<CR>
       vnoremap <silent> K :call SearchVisualSelectionWithAg()<CR>
-      nnoremap <silent> <leader>gl :Commits<CR>
-      nnoremap <silent> <leader>ga :BCommits<CR>
-      nnoremap <silent> <leader>ft :Filetypes<CR>
 
       imap <C-x><C-f> <plug>(fzf-complete-file-ag)
       imap <C-x><C-l> <plug>(fzf-complete-line)
@@ -314,6 +303,32 @@ noremap tt :tab split<CR>
 tnoremap <leader><Esc> <C-\><C-n>
 tnoremap <leader>jk <C-\><C-n>
 
+" leaderguide mapping
+let g:lmap = {}
+
+let g:lmap.g = {
+      \'name': 'Menu: Git',
+      \'s': [':Gstatus', 'Status'],
+      \'c': [':Gcommit', 'Commit'],
+      \'m': [':Gmerge', 'Merge'],
+      \'u': [':Gpull', 'Pull'],
+      \'p': [':Gstatus', 'Push'],
+      \'w': [':Gwrite', 'Write'],
+      \}
+
+let g:lmap.s = {
+      \'name': 'Menu: Search',
+      \'f': [':Files', 'Files'],
+      \'b': [':Buffers', 'Buffers'],
+      \'w': [':Windows', 'Windows'],
+      \'m': [':Marks', 'Marks'],
+      \'t': [':Tags', 'Tags'],
+      \'l': [':Lines', 'Lines'],
+      \'c': [':Commits', 'Commits'],
+      \}
+
 " starts leaderguide in pressing leader
+call leaderGuide#register_prefix_descriptions("<Space>", "g:lmap")
 nnoremap <silent> <leader> :<c-u>LeaderGuide '<Space>'<CR>
 vnoremap <silent> <leader> :<c-u>LeaderGuideVisual '<Space>'<CR>
+
