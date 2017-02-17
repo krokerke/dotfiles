@@ -1,5 +1,5 @@
 ! Enabled modi
-rofi.modi:                           run,ssh,window
+rofi.modi:                           drun,run,ssh,window
 ! Window opacity
 rofi.opacity:                        100
 ! Window width
@@ -201,8 +201,8 @@ rofi.kb-custom-19:                   Alt+Shift+9
 ! The display name of this browser
 rofi.display-ssh: ssh
 ! The display name of this browser
-rofi.display-run: application
+rofi.display-run: run
 ! The display name of this browser
-rofi.display-drun: application
+rofi.display-drun: app
 ! The display name of this browser
 rofi.display-combi: ?

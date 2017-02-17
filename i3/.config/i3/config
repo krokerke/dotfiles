@@ -43,7 +43,7 @@ bindsym $mod+Shift+q kill
 # installed.
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
-bindsym $mod+d exec --no-startup-id "rofi -modi drun,ssh,window -show drun -eh 2 -padding 200 -fullscreen -color-window '#273238, #273238, #1e2529' -color-normal '#273238, #c1c1c1, #273238, #394249, #ffffff' -color-active '#273238, #80cbc4, #273238, #394249, #80cbc4' -color-urgent '#273238, #ff1844, #273238, #394249, #ff1844'"
+bindsym $mod+d exec --no-startup-id "rofi -show"
 
 # change focus
 bindsym $mod+h focus left
@@ -184,7 +184,7 @@ bar {
   }
 }
 
-client.focused #1A8A74 #1A8A74 #ffffff #dddddd
+client.focused #1A8A74 #1A8A74 #ffffff #ffffff
 client.focused_inactive #1a2327 #1a2327 #888888 #292d2e
 client.unfocused #1a2327 #1a2327 #888888 #292d2e
 client.urgent #2f343a #900000 #ffffff #900000
