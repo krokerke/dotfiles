@@ -9,8 +9,11 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod4
-set $alt Mod1
+set $mod Mod1
+set $alt Mod4
+
+set $display1 HDMI-0
+set $display2 DVI-I-1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -96,16 +99,16 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # multiple outputs
-workspace 1 output HDMI-0
-workspace 2 output HDMI-0
-workspace 3 output HDMI-0
-workspace 4 output HDMI-0
-workspace 5 output HDMI-0
-workspace 6 output DVI-I-1
-workspace 7 output DVI-I-1
-workspace 8 output DVI-I-1
-workspace 9 output DVI-I-1
-workspace 10 output DVI-I-1
+workspace 1 output $display1
+workspace 2 output $display1
+workspace 3 output $display1
+workspace 4 output $display1
+workspace 5 output $display1
+workspace 6 output $display2
+workspace 7 output $display2
+workspace 8 output $display2
+workspace 9 output $display2
+workspace 10 output $display2
 
 # switch to workspace
 bindsym $mod+1 workspace number 1
