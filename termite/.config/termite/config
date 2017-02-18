@@ -1,39 +1,51 @@
-[colors]
+[options]
+font = Hack 9
 
-# special
-foreground      = #c5c8c6
-foreground_bold = #c5c8c6
-cursor          = #c5c8c6
+[colors]
+# Base16 Tomorrow Alt
+
+foreground      = #ffffff
+foreground_bold = #8e908c
+cursor          = #4d4d4c
 background      = #1e272f
 
-# black
-color0  = #1d1f21
-color8  = #969896
+# 16 color space
 
-# red
-color1  = #e74c3c
-color9  = #e74c3c
+# Black, Gray, Silver, White
+color0  = #1e272f
+color8  = #4d4d4c
+color7  = #8e908c
+color15 = #ffffff
 
-# green
-color2  = #2ecc71
-color10 = #2ecc71
+# Red
+color1  = #c82829
+color9  = #c82829
 
-# yellow
-color3  = #f0bd58
-color11 = #f0bd58
+# Green
+color2  = #1a8a74
+color10 = #1a8a74
 
-# blue
-color4  = #2979be
-color12 = #2979be
+# Yellow
+color3  = #eab700
+color11 = #eab700
 
-# magenta
-color5  = #ab78bb
-color13 = #ab78bb
+# Blue
+color4  = #4271ae
+color12 = #4271ae
 
-# cyan
-color6  = #7cbeb5
-color14 = #7cbeb5
+# Purple
+color5  = #8959a8
+color13 = #8959a8
 
-# white
-color7  = #c5c8c6
-color15 = #c5c8c6
+# Teal
+color6  = #3e999f
+color14 = #3e999f
+
+# Extra colors
+color15 = #1d1f21
+color16 = #f5871f
+color17 = #a3685a
+color18 = #e0e0e0
+color19 = #d6d6d6
+color20 = #969896
+color21 = #282a2e
