@@ -30,8 +30,7 @@ cd ~/.config/i3blocks &&\
 git clone https://github.com/vivien/i3blocks-contrib blocklets
 
 # theming
-$INSTALL lxappearance arc-themes-maia arc-maia-icon-theme &&\
-cp -r ~/dotfiles/gtk-theme/Breeze-Turquoise /usr/share/icons &&\
+$INSTALL lxappearance arc-themes-maia arc-maia-icon-theme breeze-snow-cursor-theme &&\
 stow gtk-theme
 
 # install editor
