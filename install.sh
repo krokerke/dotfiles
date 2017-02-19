@@ -21,6 +21,11 @@ stow compton &&\
 stow i3 &&\
 chsh -s /usr/bin/fish &&\
 
+# theming
+$INSTALL lxappearance arc-themes-maia arc-maia-icon-theme &&\
+cp -r ~/dotfiles/gtk-theme/Breeze-Turquoise /usr/share/icons &&\
+stow gtk-theme
+
 # install editor
 $INSTALL neovim fzf xsel 
 $PIP neovim
