@@ -9,22 +9,23 @@ set termguicolors " true color support
 " neovim specific
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1 " toggle cursor for pipe/square for insert/non-insert
 set inccommand=split
-let g:terminal_color_0  = '#1d1f21'
-let g:terminal_color_8  = '#969896'
-let g:terminal_color_1  = '#e74c3c'
-let g:terminal_color_9  = '#e74c3c'
-let g:terminal_color_2  = '#2ecc71'
-let g:terminal_color_10 = '#2ecc71'
-let g:terminal_color_3  = '#f0bd58'
-let g:terminal_color_11 = '#f0bd58'
-let g:terminal_color_4  = '#2979be'
-let g:terminal_color_12 = '#2979be'
-let g:terminal_color_5  = '#ab78bb'
-let g:terminal_color_13 = '#ab78bb'
-let g:terminal_color_6  = '#7cbeb5'
-let g:terminal_color_14 = '#7cbeb5'
-let g:terminal_color_7  = '#c5c8c6'
-let g:terminal_color_15 = '#ffffff'
+
+let g:terminal_color_0 = '#1e272f'
+let g:terminal_color_8 = '#4d4d4c'
+let g:terminal_color_1 = '#c82829'
+let g:terminal_color_9 = '#c82829'
+let g:terminal_color_2 = '#1a8a74'
+let g:terminal_color_10 = '#1a8a74'
+let g:terminal_color_3 = '#eab700'
+let g:terminal_color_11 = '#eab700'
+let g:terminal_color_4 = '#4271ae'
+let g:terminal_color_12 = '#4271ae'
+let g:terminal_color_5 = '#8959a8'
+let g:terminal_color_13 = '#8959a8'
+let g:terminal_color_6 = '#3e999f'
+let g:terminal_color_14 = '#3e999f'
+let g:terminal_color_7 = '#8e908c'
+let g:terminal_color_15 = '#1d1f21'
 
 " mapleader
 let mapleader=' '      " using space
@@ -38,8 +39,9 @@ set timeoutlen=250 " time to use key after leader
 " colors
 syntax enable     " enable syntax processing
 set synmaxcol=200 " syntax highlight till col n; better performance
-colorscheme tomorrow_sat
-"set background=dark
+let base16colorspace=256
+set background=dark
+colorscheme tomorrow_dark
 
 " file / buffer
 filetype on           " enable filetype detection
