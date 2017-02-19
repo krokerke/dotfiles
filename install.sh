@@ -34,7 +34,7 @@ $INSTALL lxappearance arc-themes-maia arc-maia-icon-theme breeze-snow-cursor-the
 stow gtk-theme
 
 # install editor
-$INSTALL neovim fzf xsel 
+$INSTALL neovim fzf xsel
 $PIP neovim
 cd ~/dotfiles &&\
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
@@ -44,3 +44,28 @@ nvim '+:PlugInstall'
 
 # install basic dev tools
 $INSTALL tig
+
+# install packages
+$INSTALL \
+  openssh &&\
+$INSTALL \
+  ranger &&\ # filemanager
+  parted &&\ # partition
+  apvlv &&\ # document viewer
+  feh &&\ # image viewer
+  mpv &&\ # video viewer
+  cmus &&\ # audio player
+  imagemagick &&\ # image editor
+\
+# gui
+$INSTALL \
+  nemo gsettings set org.nemo.desktop show-desktop-icons false &&\ # filemanager
+  gparted &&\ # partition
+  evince &&\ # document viewer
+  gthumb &&\ # image viewer
+  totem &&\ # video player
+  rhytmbox &&\ # audio player
+  inkscape &&\ # vectorimage editor
+  gimp &&\ # image editor
+$AUR \
+  aseprite &&\ # pixelart editor
