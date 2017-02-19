@@ -21,6 +21,14 @@ stow compton &&\
 stow i3 &&\
 chsh -s /usr/bin/fish &&\
 
+# i3blocks
+$INSTALL acpi openvpn sysstat lm_sensors
+$AUR playerctl i3blocks
+cd ~/dotfiles &&\
+stow i3blocks &&\
+cd ~/.config/i3blocks &&\
+git clone https://github.com/vivien/i3blocks-contrib blocklets
+
 # theming
 $INSTALL lxappearance arc-themes-maia arc-maia-icon-theme &&\
 cp -r ~/dotfiles/gtk-theme/Breeze-Turquoise /usr/share/icons &&\
