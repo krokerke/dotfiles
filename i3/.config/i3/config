@@ -160,7 +160,7 @@ exec --no-startup-id polybar bottom
 
 # background image
 exec --no-startup-id feh --bg-scale ~/.config/i3/bgimage.png
-exec --no-startup-id compton --config ~/.config/compton/config
+exec_always --no-startup-id compton --config ~/.config/compton/config
 
 workspace_auto_back_and_forth yes
 focus_follows_mouse no

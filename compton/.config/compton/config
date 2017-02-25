@@ -1,0 +1,9 @@
+shadow-exclude = [
+  "_NET_WM_STATE@:32a *= '_NET_WM_STATE_HIDDEN'"
+];
+
+opacity-rule = [
+  "96:class_g = 'Termite' && !_NET_WM_STATE@:32a",
+  "96:class_g = 'Polybar' && !_NET_WM_STATE@:32a",
+  "0:_NET_WM_STATE@:32a *= '_NET_WM_STATE_HIDDEN'"
+];
