@@ -102,15 +102,6 @@ def rename_workspaces(i3):
         name_parts = parse_workspace_name(workspace.name)
         name_parts['icons'] = ' '.join([icon_for_window(w) for w in workspace.leaves()])
 
-        # as we enumerate, leave one gap between each workspace
-        if ws_info.output != prev_output and prev_output != "":
-            n += 1 # leave a gap
-        prev_output = ws_info.output
-
-        # renumber workspace
-        name_parts['num'] = n
-        n += 1
-
         new_name = construct_workspace_name(name_parts)
         i3.command('rename workspace "%s" to "%s"' % (workspace.name, new_name))
 
