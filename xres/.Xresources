@@ -1,40 +1,49 @@
-! special
-*.foreground:   #d3dae3
-*.background:   #202631
-*.cursorColor:  #d3dae3
+! Base16 Manjaro Maia
 
-! black
-*.color0:       #202631
-*.color8:       #c5c8c6
+#define base00 #202631
+#define base01 #353944
+#define base02 #404552
+#define base03 #c5c8c6
+#define base04 #b4b7b4
+#define base05 #d3dae3
+#define base06 #e0e0e0
+#define base07 #ffffff
+#define base08 #c82829
+#define base09 #f5871f
+#define base0A #eab700
+#define base0B #1a8a74
+#define base0C #718c00
+#define base0D #4271ae
+#define base0E #89589a
+#define base0F #8e4600
 
-! red
-*.color1:       #c82829
-*.color9:       #c82829
+*.foreground:   base05
+*.background:   base00
+*.cursorColor:  base05
 
-! green
-*.color2:       #1a8a74
-*.color10:      #1a8a74
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
 
-! yellow
-*.color3:       #eab700
-*.color11:      #eab700
+*.color8:       base03
+*.color9:       base08
+*.color10:      base0B
+*.color11:      base0A
+*.color12:      base0D
+*.color13:      base0E
+*.color14:      base0C
+*.color15:      base07
 
-! blue
-*.color4:       #4271ae
-*.color12:      #4271ae
-
-! magenta
-*.color5:       #89589a
-*.color13:      #89589a
-
-! cyan
-*.color6:       #718c00
-*.color14:      #718c00
-
-! white
-*.color7:       #c5c8c6
-*.color15:      #ffffff
-
-! additional
-! orange
-*.color16:      #f5871f
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*.color16:      base09
+*.color17:      base0F
+*.color18:      base01
+*.color19:      base02
+*.color20:      base04
+*.color21:      base06

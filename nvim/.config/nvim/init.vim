@@ -41,7 +41,7 @@ syntax enable     " enable syntax processing
 set synmaxcol=200 " syntax highlight till col n; better performance
 let base16colorspace=256
 set background=dark
-colorscheme tomorrow_dark
+colorscheme base16_maia
 
 " file / buffer
 filetype on           " enable filetype detection
@@ -249,8 +249,8 @@ call plug#begin("~/.config/nvim/plugged")
       " vim-multiple-cursors: sublime like multi cursors
     Plug 'Valloric/MatchTagAlways'
       " matchTagAlways: highlight enclosing tags
-    Plug 'gorodinskiy/vim-coloresque'
-      " vim-coloresque: show colors in css/html/less/sass
+    Plug 'ap/vim-css-color'
+      " vim-css-color: show colors in css/html/less/sass
     Plug 'mattn/emmet-vim'
       " emmet-vim: emmet for vim
     Plug 'jiangmiao/auto-pairs'
