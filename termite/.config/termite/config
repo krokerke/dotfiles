@@ -2,50 +2,41 @@
 font = Hack 9
 
 [colors]
-# Base16 Tomorrow Alt
 
-foreground      = #ffffff
-foreground_bold = #8e908c
-cursor          = #4d4d4c
-background      = #1e272f
+# special
+foreground      = #d3dae3
+foreground_bold = #d3dae3
+cursor          = #d3dae3
+background      = #202631
 
-# 16 color space
+# black
+color0  = #202631
+color8  = #c5c8c6
 
-# Black, Gray, Silver, White
-color0  = #1e272f
-color8  = #4d4d4c
-color7  = #8e908c
-color15 = #ffffff
-
-# Red
+# red
 color1  = #c82829
 color9  = #c82829
 
-# Green
-color2  = #718c00
-color10 = #718c00
+# green
+color2  = #1a8a74
+color10 = #1a8a74
 
-# Yellow
+# yellow
 color3  = #eab700
 color11 = #eab700
 
-# Blue
+# blue
 color4  = #4271ae
 color12 = #4271ae
 
-# Purple
-color5  = #8959a8
-color13 = #8959a8
+# magenta
+color5  = #89589a
+color13 = #89589a
 
-# Teal
-color6  = #3e999f
-color14 = #3e999f
+# cyan
+color6  = #718c00
+color14 = #718c00
 
-# Extra colors
-color15 = #1d1f21
-color16 = #f5871f
-color17 = #a3685a
-color18 = #e0e0e0
-color19 = #d6d6d6
-color20 = #969896
-color21 = #282a2e
+# white
+color7  = #c5c8c6
+color15 = #ffffff
