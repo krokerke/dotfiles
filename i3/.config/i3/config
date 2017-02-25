@@ -145,23 +145,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-  status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
-  position top
-
-  colors {
-    separator #666666
-    background #282F39
-    statusline #ffffff
-    focused_workspace #1A8A74 #1A8A74 #ffffff
-    active_workspace #333333 #333333 #ffffff
-    inactive_workspace #1b2429 #282F39 #aaaaaa
-    urgent_workspace #2f343a #900000 #ffffff
-  }
-}
-
 client.focused #1A8A74 #1A8A74 #ffffff #ffffff
 client.focused_inactive #1a2327 #1a2327 #888888 #292d2e
 client.unfocused #1a2327 #1a2327 #888888 #292d2e
@@ -170,13 +153,18 @@ client.urgent #2f343a #900000 #ffffff #900000
 #
 # additional; above cleaned autoconfig
 #
+
+# bar
+exec --no-startup-id polybar top
+exec --no-startup-id polybar bottom
+
 # background image
 exec --no-startup-id feh --bg-scale ~/.config/i3/bgimage.png
 exec --no-startup-id compton --config ~/.config/compton/config
 
 workspace_auto_back_and_forth yes
 focus_follows_mouse no
-new_window pixel 3
+new_window pixel 2
 
 # i3-gaps
 gaps inner 6
