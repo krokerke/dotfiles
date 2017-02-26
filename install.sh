@@ -21,9 +21,10 @@ stow i3
 chsh -s /usr/bin/fish
 
 # polybar
-$AUR polybar cower-git
+$AUR polybar cower-git playerctl spotify twmn-git
 cd ~/dotfiles &&\
 stow polybar
+stow twmn
 
 # theming
 $INSTALL lxappearance arc-themes-maia arc-maia-icon-theme breeze-snow-cursor-theme
