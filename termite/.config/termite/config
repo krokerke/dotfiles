@@ -4,14 +4,14 @@ font = Hack 9
 [colors]
 
 # special
-foreground      = #d3dae3
-foreground_bold = #d3dae3
-cursor          = #d3dae3
+foreground      = #cdd3de
+foreground_bold = #cdd3de
+cursor          = #cdd3de
 background      = #202631
 
 # black
 color0  = #202631
-color8  = #c5c8c6
+color8  = #707880
 
 # red
 color1  = #c82829
@@ -38,5 +38,5 @@ color6  = #718c00
 color14 = #718c00
 
 # white
-color7  = #d3dae3
+color7  = #cdd3de
 color15 = #ffffff

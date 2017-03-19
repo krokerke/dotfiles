@@ -10,8 +10,8 @@
 [colors]
 background = #202631
 background-alt = #2f343f
-foreground = #d3dae3
-foreground-alt = #d3dae3
+foreground = #cdd3de
+foreground-alt = #cdd3de
 primary = #1a8a74
 secondary = #4271ae
 alert = #c82829
