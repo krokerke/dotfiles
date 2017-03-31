@@ -12,9 +12,7 @@ let maplocalleader='ä' " using space as localleader
 " OPTIONS
 " basic {{{
 set shell=/usr/bin/fish " set correct shell
-set timeout             " activate timeouts
-set ttimeoutlen=0       " time to use keycodes
-set timeoutlen=250      " time to use key after leader
+set notimeout             " deactivate timeouts
 " }}}
 " colors/ syntax {{{
 syntax enable            " enable syntax highlighting
@@ -132,9 +130,13 @@ if has('mouse')
 endif
 " }}}
 " additional {{{
+map Y y$
 " working directory to current file
 cmap cwd lcd %:p:h
 cmap cd. lcd %:p:h
+
+" clipboard
+set clipboard=unnamed,unnamedplus
 " }}}
 
 
@@ -264,16 +266,18 @@ Plug 'junegunn/fzf.vim'
   map <silent> <leader>lt :Tags<cr>
   map <silent> <localleader>lt :BTags<cr>
 " }}}
-" completion {{{
-Plug 'sheerun/vim-polyglot'
+" languages {{{
+Plug 'sheerun/vim-polyglot' " all languages combined: basic support
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+set completeopt=longest,menuone
+let g:deoplete#enable_at_startup = 1
+
+" javascript
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+" typescript
 Plug 'mhartington/nvim-typescript'
+" ruby
 Plug 'fishbullet/deoplete-ruby'
-Plug 'sebastianmarkow/deoplete-rust'
-Plug 'padawan-php/deoplete-padawan'
-  " Use deoplete.
-  let g:deoplete#enable_at_startup = 1
 " }}}
 
 call plug#end()
@@ -287,6 +291,22 @@ vnoremap <silent> jk <Esc>
 " quit terminal-mode with ESC (or like inoremap <silent> jk)
 tnoremap <leader><Esc> <C-\><C-n>
 tnoremap <leader>jk <C-\><C-n>
+
+map <silent> [a :prev<CR>
+map <silent> ]a :next<CR>
+map <silent> [A :first<CR>
+map <silent> ]A :last<CR>
+
+map <silent> [q :cprev<CR>
+map <silent> ]q :cnext<CR>
+map <silent> [Q :cfirst<CR>
+map <silent> ]Q :clast<CR>
+
+map <silent> [l :lprev<CR>
+map <silent> ]l :lnext<CR>
+map <silent> [L :lfirst<CR>
+map <silent> ]L :llast<CR>
+
 
 " highlight last inserted text
 nnoremap gV `[v`]

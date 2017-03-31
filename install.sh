@@ -31,7 +31,7 @@ $INSTALL lxappearance arc-themes-maia arc-maia-icon-theme breeze-snow-cursor-the
 stow gtk-theme
 
 # install editor
-$INSTALL neovim fzf xsel
+$INSTALL neovim fzf xsel highlight
 $PIP neovim
 cd ~/dotfiles &&\
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
