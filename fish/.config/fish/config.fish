@@ -6,13 +6,6 @@ if status --is-login
 end
 
 
-# PATH
-set -gx PATH ~/.npm-global/bin $PATH
-
-set -gx PATH ~/.android-sdk-linux/tools $PATH
-set -gx PATH ~/.android-sdk-linux/platform-tools $PATH
-set -gx ANDROID_HOME ~/.android-sdk-linux/
-
 set normal (set_color normal)
 set magenta (set_color magenta)
 set yellow (set_color yellow)
