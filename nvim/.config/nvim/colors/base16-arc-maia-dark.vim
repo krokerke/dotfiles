@@ -1,12 +1,16 @@
 " vi:syntax=vim
 
+" base16-vim (https://github.com/chriskempson/base16-vim)
+" by Chris Kempson (http://chriskempson.com)
+" Arc-Maia Dark scheme by Kevin Kroker (https://github.com/krokerke/)
+
 " This enables the coresponding base16-shell script to run so that
 " :colorscheme works in terminals supported by base16-shell scripts
 " User must set this variable in .vimrc
 "   let g:base16_shell_path=base16-builder/output/shell/
 if !has('gui_running')
   if exists("g:base16_shell_path")
-    execute "silent !/bin/sh ".g:base16_shell_path."/base16-google-dark.sh"
+    execute "silent !/bin/sh ".g:base16_shell_path."/base16-arc-maia-dark.sh"
   endif
 endif
 
@@ -14,10 +18,10 @@ endif
 let s:gui00 = "202631"
 let s:gui01 = "353944"
 let s:gui02 = "404552"
-let s:gui03 = "c5c8c6"
-let s:gui04 = "b4b7b4"
-let s:gui05 = "d3dae3"
-let s:gui06 = "e0e0e0"
+let s:gui03 = "707880"
+let s:gui04 = "c9ccd3"
+let s:gui05 = "cdd3de"
+let s:gui06 = "d5dbe5"
 let s:gui07 = "ffffff"
 let s:gui08 = "c82829"
 let s:gui09 = "f5871f"
@@ -26,7 +30,7 @@ let s:gui0B = "1a8a74"
 let s:gui0C = "718c00"
 let s:gui0D = "4271ae"
 let s:gui0E = "89589a"
-let s:gui0F = "8e4600"
+let s:gui0F = "5e5e5e"
 
 " Terminal color definitions
 let s:cterm00 = "00"
@@ -58,7 +62,7 @@ endif
 " Theme setup
 hi clear
 syntax reset
-let g:colors_name = "base16-google-dark"
+let g:colors_name = "base16-grayscale-dark"
 
 " Highlighting function
 fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
@@ -94,7 +98,7 @@ call <sid>hi("Folded",        s:gui03, s:gui01, s:cterm03, s:cterm01, "", "")
 call <sid>hi("IncSearch",     s:gui01, s:gui09, s:cterm01, s:cterm09, "none", "")
 call <sid>hi("Italic",        "", "", "", "", "none", "")
 call <sid>hi("Macro",         s:gui08, "", s:cterm08, "", "", "")
-call <sid>hi("MatchParen",    s:gui00, s:gui03, "", s:cterm03,  "", "")
+call <sid>hi("MatchParen",    "", s:gui03, "", s:cterm03,  "", "")
 call <sid>hi("ModeMsg",       s:gui0B, "", s:cterm0B, "", "", "")
 call <sid>hi("MoreMsg",       s:gui0B, "", s:cterm0B, "", "", "")
 call <sid>hi("Question",      s:gui0D, "", s:cterm0D, "", "", "")
@@ -219,6 +223,7 @@ call <sid>hi("javaScriptBraces",  s:gui05, "", s:cterm05, "", "", "")
 call <sid>hi("javaScriptNumber",  s:gui09, "", s:cterm09, "", "", "")
 " pangloss/vim-javascript highlighting
 call <sid>hi("jsOperator",          s:gui0D, "", s:cterm0D, "", "", "")
+call <sid>hi("jsStatement",         s:gui0E, "", s:cterm0E, "", "", "")
 call <sid>hi("jsReturn",            s:gui0E, "", s:cterm0E, "", "", "")
 call <sid>hi("jsThis",              s:gui08, "", s:cterm08, "", "", "")
 call <sid>hi("jsClassDefinition",   s:gui0A, "", s:cterm0A, "", "", "")
