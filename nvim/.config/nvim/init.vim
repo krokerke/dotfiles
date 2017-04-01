@@ -50,10 +50,9 @@ set splitright splitbelow " splits right-below instead of left-above
 " backup {{{
 set noswapfile                           " deactivate swap
 set nobackup writebackup backupcopy=auto " backup only on writing
-set backup                               " using backup..
-set backupdir=~/.config/nvim/.backup     " ..to external directory
-set backupskip=~/.config/nvim/.backup/*  " check if backup exist in directory
 set writebackup                          " write backup
+set undofile
+set undodir=~/.config/nvim/.backup
 " }}}
 " spaces / tabs {{{
 set expandtab                  " tabs are spaces

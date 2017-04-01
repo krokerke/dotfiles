@@ -5,6 +5,7 @@ if status --is-login
     end
 end
 
+set PATH ~/.npm-global/bin $PATH
 
 set normal (set_color normal)
 set magenta (set_color magenta)

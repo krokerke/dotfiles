@@ -2,6 +2,7 @@
 
 INSTALL="sudo pacman -S"
 PIP="sudo pip install"
+NPM="npm i -g"
 AUR="yaourt -S"
 
 # update system
@@ -18,10 +19,11 @@ stow termite
 stow rofi
 stow compton
 stow i3
+stow fish
 chsh -s /usr/bin/fish
 
 # polybar
-$AUR polybar cower-git playerctl spotify twmn-git
+$AUR polybar cower-git playerctl-git spotify twmn-git
 cd ~/dotfiles &&\
 stow polybar
 stow twmn
@@ -41,8 +43,26 @@ nvim '+:PlugInstall'
 
 # install basic dev tools
 $INSTALL tig
+# javascript
+$INSTALL nodejs npm &&\
+# npm global packages in home
+mkdir ~/.npm-global &&\
+npm config set prefix '~/.npm-global' &&\
+# set PATH temp (fixed in fish config)
+set PATH ~/.npm-global/bin $PATH &&\
+$NPM tern
+# typescript
+$NPM typescript
+# haskell
+$INSTALL stack ghc hoogle
+# purescript
+$NPM purescript pulp
+# rust
+$INSTALL rustup
+# ruby
+$INSTALL ruby
 
-# install packages
+ install packages
 $INSTALL \
   openssh
 $INSTALL \
