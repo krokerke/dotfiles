@@ -3,8 +3,8 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # modkey
-set $mod Mod1
-set $alt Mod4
+set $mod Mod4
+set $alt Mod1
 
 # displays
 set $display1 HDMI-0
@@ -117,7 +117,8 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec ~/.config/i3/shutdown_menu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

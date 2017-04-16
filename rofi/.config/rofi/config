@@ -1,5 +1,5 @@
 ! Enabled modi
-rofi.modi:                           drun,run,ssh,window
+rofi.modi:                           drun,ssh,window
 ! Window opacity
 rofi.opacity:                        100
 ! Window width
@@ -31,7 +31,7 @@ rofi.xoffset:                        0
 ! Always show number of lines
 rofi.fixed-num-lines:                false
 ! Terminal to use
-rofi.terminal:                       rofi-sensible-terminal
+rofi.terminal:                       termite
 ! Ssh client to use
 rofi.ssh-client:                     ssh
 ! Ssh command to execute

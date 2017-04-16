@@ -21,23 +21,6 @@ set synmaxcol=200        " syntax highlighting till col N for better performance
 set background=dark      " prefer dark background compatible colors
 let base16colorspace=256 " using 256color for base16 themes
 colorscheme base16-arc-maia-dark
-
-let g:terminal_color_0  = '#202631'
-let g:terminal_color_1  = '#c82829'
-let g:terminal_color_2  = '#1a8a74'
-let g:terminal_color_3  = '#eab700'
-let g:terminal_color_4  = '#4271ae'
-let g:terminal_color_5  = '#89589a'
-let g:terminal_color_6  = '#718c00'
-let g:terminal_color_7  = '#cdd3de'
-let g:terminal_color_8  = '#c82829'
-let g:terminal_color_9  = '#707880'
-let g:terminal_color_10 = '#1a8a74'
-let g:terminal_color_11 = '#eab700'
-let g:terminal_color_12 = '#4271ae'
-let g:terminal_color_13 = '#89589a'
-let g:terminal_color_14 = '#718c00'
-let g:terminal_color_15 = '#ffffff'
 " }}}
 " file / buffer {{{
 filetype plugin indent on " enable filetype detection with indent and plugin
@@ -281,15 +264,7 @@ Plug 'fishbullet/deoplete-ruby'
 
 call plug#end()
 
-
-" KEYBINDINGS
-" jk is escape
-inoremap <silent> jk <Esc>
-vnoremap <silent> jk <Esc>
-
-" quit terminal-mode with ESC (or like inoremap <silent> jk)
 tnoremap <leader><Esc> <C-\><C-n>
-tnoremap <leader>jk <C-\><C-n>
 
 map <silent> [a :prev<CR>
 map <silent> ]a :next<CR>
