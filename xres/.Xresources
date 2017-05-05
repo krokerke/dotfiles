@@ -4,10 +4,10 @@
 #define base01 #353944
 #define base02 #404552
 #define base03 #707880
-#define base04 #c9ccd3
-#define base05 #cdd3de
-#define base06 #d5dbe5
-#define base07 #ffffff
+#define base04 #b8b8b8
+#define base05 #d8d8d8
+#define base06 #e8e8e8
+#define base07 #f8f8f8
 #define base08 #c82829
 #define base09 #f5871f
 #define base0A #eab700

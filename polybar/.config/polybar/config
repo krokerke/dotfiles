@@ -8,10 +8,10 @@
 ;=====================================================
 
 [colors]
-background = #202631
-background-alt = #2f343f
-foreground = #cdd3de
-foreground-alt = #cdd3de
+background = #151515
+background-alt = #101010
+foreground = #f8f8f8
+foreground-alt = #d8d8d8
 primary = #1a8a74
 secondary = #4271ae
 alert = #c82829
@@ -44,15 +44,15 @@ monitor-strict = true
 dpi = 72
 bottom = false
 width = 100%
-height = 20
+height = 22
 offset-x = 0
 offset-y = 0
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-border-bottom-size = 0
-border-bottom-color = ${colors.primary}
+border-bottom-size = 3
+border-bottom-color = ${colors.background-alt}
 
 spacing = 1
 padding-left = 0
@@ -61,9 +61,10 @@ module-margin-left = 1
 module-margin-right = 1
 
 font-0 = hack:pixelsize=12;2
-font-1 = unifont:size=10;2
-font-2 = siji:pixelsize=10;3
-font-3 = FontAwesome:pixelsize=14;2
+font-1 = hack:pixelsize=10;2
+font-2 = hack:pixelsize=8;2
+font-3 = FontAwesome:pixelsize=12;2
+font-4 = FontAwesome:pixelsize=10;2
 
 modules-left =  i3 xwindow
 modules-center = pkg xkeyboard
@@ -82,15 +83,15 @@ monitor-strict = true
 dpi = 72
 bottom = true
 width = 100%
-height = 20
+height = 22
 offset-x = 0
 offset-y = 0
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-border-top-size = 0
-border-top-color = ${colors.primary}
+border-top-size = 3
+border-top-color = ${colors.background-alt}
 
 spacing = 1
 padding-left = 1
@@ -99,9 +100,10 @@ module-margin-left = 0
 module-margin-right = 2
 
 font-0 = hack:pixelsize=12;2
-font-1 = unifont:size=10;2
-font-2 = siji:pixelsize=10;3
-font-3 = FontAwesome:pixelsize=14;2
+font-1 = hack:pixelsize=10;2
+font-2 = hack:pixelsize=8;2
+font-3 = FontAwesome:pixelsize=12;2
+font-4 = FontAwesome:pixelsize=10;2
 
 modules-left = volume player_previous player_stop player_playpause player_next player_title
 modules-center = eth networkspeedup networkspeeddown
@@ -196,6 +198,7 @@ label-unfocused-padding = 1
 
 label-urgent = %name%!
 label-urgent-background = ${colors.alert}
+label-urgent-foreground = ${colors.foreground}
 label-urgent-padding = 1
 
 label-visible = %name%
@@ -266,19 +269,19 @@ bar-empty-foreground = ${colors.foreground-alt}
 [module/cpu]
 type = internal/cpu
 interval = 2
-format = <ramp-coreload>
+format = <label> <ramp-coreload>
 format-prefix =
 format-prefix-foreground = ${colors.foreground-alt}
-;format-underline = #f90000
-label = %percentage%
-ramp-coreload-0 = %{F#5b}▁%{F-}
-ramp-coreload-1 = %{F#5b}▂%{F-}
-ramp-coreload-2 = %{F#5b}▃%{F-}
-ramp-coreload-3 = %{F#ff5c57}▄%{F-}
-ramp-coreload-4 = %{F#ff5c57}▅%{F-}
-ramp-coreload-5 = %{F#ff5c57}▆%{F-}
-ramp-coreload-6 = %{F#ff5c57}▇%{F-}
-ramp-coreload-7 = %{F#ff5c57}█%{F-}
+label = CPU
+label-font = 2
+ramp-coreload-0 = %{F#1a8a74}▁%{F-}
+ramp-coreload-1 = %{F#1a8a74}▂%{F-}
+ramp-coreload-2 = %{F#eab700}▃%{F-}
+ramp-coreload-3 = %{F#eab700}▄%{F-}
+ramp-coreload-4 = %{F#f5871f}▅%{F-}
+ramp-coreload-5 = %{F#f5871f}▆%{F-}
+ramp-coreload-6 = %{F#c82829}▇%{F-}
+ramp-coreload-7 = %{F#c82829}█%{F-}
 
 
 [module/memory]
@@ -286,17 +289,21 @@ type = internal/memory
 interval = 2
 format = <label> <bar-used>
 format-prefix-foreground = ${colors.foreground-alt}
-label =
-bar-used-width = 30
+label = RAM
+label-font = 2
+bar-used-width = 24
 bar-used-foreground-0 = ${colors.primary}
 bar-used-foreground-1 = ${colors.primary}
 bar-used-foreground-2 = #f3f99d
 bar-used-foreground-3 = #ff5c57
-;bar-used-fill = ▐
-bar-used-fill = 
-bar-used-empty = 
-bar-used-empty-foreground = #666666
-bar-used-indicator =
+bar-used-indicator = █
+bar-used-indicator-font = 3
+bar-used-indicator-foreground = #fff
+bar-used-fill = █
+bar-used-fill-font = 3
+bar-used-empty = █
+bar-used-empty-font = 3
+bar-used-empty-foreground = #44
 
 
 [module/wlan]
