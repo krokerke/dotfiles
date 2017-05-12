@@ -7,7 +7,7 @@ set $mod Mod4
 set $alt Mod1
 
 # displays
-set $display1 HDMI-0
+set $display1 HDMI-1
 set $display2 DVI-I-1
 
 
@@ -151,8 +151,10 @@ bindsym $mod+r mode "resize"
 #
 
 # bar
-exec --no-startup-id polybar top
-exec --no-startup-id polybar bottom
+exec --no-startup-id SHELL=$(which sh) MONITOR=$display1 polybar top
+exec --no-startup-id SHELL=$(which sh) MONITOR=$display2 polybar top
+exec --no-startup-id SHELL=$(which sh) MONITOR=$display1 polybar bottom
+exec --no-startup-id SHELL=$(which sh) MONITOR=$display2 polybar bottom
 
 # notifier
 exec --no-startup-id twmnd

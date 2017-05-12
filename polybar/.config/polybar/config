@@ -39,7 +39,7 @@ throttle-input-for = 30
 screenchange-reload = true
 
 [bar/top]
-monitor =
+monitor = ${env:MONITOR}
 monitor-strict = true
 dpi = 72
 bottom = false
@@ -75,10 +75,10 @@ tray-padding = 4
 tray-transparent = true
 tray-background = #0063ff
 
-
+${env:MONITOR}
 
 [bar/bottom]
-monitor =
+monitor = ${env:MONITOR}
 monitor-strict = true
 dpi = 72
 bottom = true
@@ -347,7 +347,7 @@ label-disconnected-foreground = ${colors.foreground-alt}
 
 [module/networkspeedup]
 type = internal/network
-interface = enp0s3
+interface = enp2s0
 label-connected = "%upspeed:7%"
 format-connected = <label-connected>
 format-connected-prefix = "%{F#1a8a74}%{F-} "
@@ -356,7 +356,7 @@ format-connected-prefix-foreground = #5b
 
 [module/networkspeeddown]
 type = internal/network
-interface = enp0s3
+interface = enp2s0
 label-connected = "%downspeed:7%"
 format-connected = <label-connected>
 format-connected-prefix = "%{F#1a8a74}%{F-} "
@@ -381,7 +381,7 @@ label = %{F#16a085}%{F-} %time%
 type = custom/script
 interval = 1200
 format = <label>
-format-underline = #dc322f
+; format-underline = #dc322f
 label = "%output:0:30%"
 exec = .config/polybar/pkg.sh
 exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
