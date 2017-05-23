@@ -140,7 +140,7 @@ Plug 'vim-airline/vim-airline-themes' " vim-airline: better status line
   let g:airline_symbols = {}
   let g:airline_symbols.space = "\ua0"
 
-Plug 'vim-signature'           " vim-signature: show marks on number col
+Plug 'kshenoy/vim-signature'           " vim-signature: show marks on number col
 Plug 'junegunn/vim-peekaboo'   " show register in split
 Plug 'Valloric/MatchTagAlways' " matchTagAlways: highlight enclosing tags
 Plug 'ap/vim-css-color'        " vim-css-color: show colors in css/html/less/sass
