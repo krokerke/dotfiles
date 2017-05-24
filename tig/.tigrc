@@ -1,0 +1,9 @@
+set vertical-split = false
+set split-view-width = 80%
+
+bind status D !@?rm %(file)
+bind status + !?git commit --amend
+
+bind generic p !?git push %(remote) %(branch)
+bind generic u !?git pull %(remote) %(branch)
+bind generic 9 !@sh -c "echo -n %(commit) | xclip -selection c"
