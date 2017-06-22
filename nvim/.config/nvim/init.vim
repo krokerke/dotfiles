@@ -154,10 +154,10 @@ let g:gitgutter_enabled = 1
 let g:gitgutter_highlight_lines = 0
 
 Plug 'scrooloose/nerdtree'
-" Plug 'tpope/vim-vinegar'
-let NERDTreeHijackNetrw=1
-map <silent> <leader><space> :edit.<CR>
-map <C-n> :NERDTreeToggle<CR>
+Plug 'tpope/vim-vinegar'
+" let NERDTreeHijackNetrw=1
+" map <silent> <leader><space> :edit.<CR>
+" map <C-n> :NERDTreeToggle<CR>
 Plug 'terryma/vim-smooth-scroll' " scroll smooth
 noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
 noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
@@ -171,6 +171,7 @@ Plug 'tpope/vim-repeat'     " repeat via '.' for plugins
 Plug 'jiangmiao/auto-pairs' " auto-pairs: insert or delete brackes, quotes, etc.
 " }}}
 " new features {{{
+Plug 'AndrewRadev/switch.vim'          " toggle values like boolean false<->true
 Plug 'tpope/vim-commentary'            " commenting tool
 Plug 'tpope/vim-surround'              " change surrounding brackets
 Plug 'tpope/vim-eunuch'                " UNIX shell commands for vim (e.g. :Move, :Mkdir, ...)
@@ -250,6 +251,7 @@ Plug 'junegunn/fzf.vim'
 " }}}
 " languages {{{
 Plug 'sheerun/vim-polyglot' " all languages combined: basic support
+Plug 'pbrisbin/vim-syntax-shakespeare'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 set completeopt=longest,menuone
 let g:deoplete#enable_at_startup = 1
@@ -257,7 +259,7 @@ let g:deoplete#enable_at_startup = 1
 " javascript
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 " typescript
-Plug 'mhartington/nvim-typescript'
+" Plug 'mhartington/nvim-typescript', { 'do': ':UpdateRemotePlugins' }
 " ruby
 Plug 'fishbullet/deoplete-ruby'
 " }}}
