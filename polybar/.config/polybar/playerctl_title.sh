@@ -9,7 +9,7 @@ fi
 if [[ $player_status = "Playing" ]]; then
     echo "%{F#ffffff}$metadata"      # Orange when playing
 elif [[ $player_status = "Paused" ]]; then
-    echo "%{F#404552}$metadata"      # Greyed out info when paused
+    echo "%{F#404552}Paused"      # Greyed out info when paused
 else
     echo "%{F#404552} not connected" # Greyed out icon when stopped
 fi
