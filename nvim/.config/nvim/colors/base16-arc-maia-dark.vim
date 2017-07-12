@@ -88,7 +88,7 @@ endif
 " Theme setup
 hi clear
 syntax reset
-let g:colors_name = "base16-grayscale-dark"
+let g:colors_name = "base16-arc-maia-dark"
 
 " Highlighting function
 fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
