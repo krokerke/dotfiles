@@ -9,3 +9,5 @@ bind status R !?git commit -C ORIG_HEAD
 bind generic p !?git push %(remote) %(branch)
 bind generic u !?git pull %(remote) %(branch)
 bind generic 9 !@sh -c "echo -n %(commit) | xclip -selection c"
+
+bind refs P    !?git push origin HEAD:%(branch)
