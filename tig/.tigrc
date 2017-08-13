@@ -3,6 +3,8 @@ set split-view-width = 80%
 
 bind status D !@?rm %(file)
 bind status + !?git commit --amend
+bind status E !?git reset --soft HEAD~1
+bind status R !?git commit -C ORIG_HEAD
 
 bind generic p !?git push %(remote) %(branch)
 bind generic u !?git pull %(remote) %(branch)
