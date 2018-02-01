@@ -171,6 +171,7 @@ Plug 'tpope/vim-repeat'     " repeat via '.' for plugins
 Plug 'jiangmiao/auto-pairs' " auto-pairs: insert or delete brackes, quotes, etc.
 " }}}
 " new features {{{
+Plug 'prettier/vim-prettier'
 Plug 'AndrewRadev/switch.vim'          " toggle values like boolean false<->true
 Plug 'tpope/vim-commentary'            " commenting tool
 Plug 'tpope/vim-surround'              " change surrounding brackets

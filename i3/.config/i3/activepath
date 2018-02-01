@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+ACTIVE='xprop -root _NET_ACTIVE_WINDOW'
+
+ID=`$ACTIVE | cut -d'#' -f 2 | cut -d' ' -f 2`
+
+PROPS=`xprop -id $ID`
+
+NAME=$(xprop -id $ID | awk '/_NET_WM_NAME/{$1=$2="";print}' | cut -d'"' -f2)
+
+alacritty --working-directory ${NAME:5}

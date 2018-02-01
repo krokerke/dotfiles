@@ -39,7 +39,7 @@ throttle-input-for = 30
 screenchange-reload = true
 
 [bar/top]
-monitor = ${env:MONITOR}
+monitor = DP-3
 monitor-strict = true
 dpi = 72
 bottom = false
@@ -63,8 +63,8 @@ module-margin-right = 1
 font-0 = hack:pixelsize=12;2
 font-1 = hack:pixelsize=10;2
 font-2 = hack:pixelsize=8;2
-font-3 = FontAwesome:pixelsize=12;2
-font-4 = FontAwesome:pixelsize=10;2
+font-3 = Font\ Awesome\ 5\ Free:pixelsize=12;2
+font-4 = Font\ Awesome\ 5\ Free:pixelsize=10;2
 
 modules-left =  i3 xwindow
 modules-center = pkg xkeyboard
@@ -75,10 +75,8 @@ tray-padding = 4
 tray-transparent = true
 tray-background = #0063ff
 
-${env:MONITOR}
-
 [bar/bottom]
-monitor = ${env:MONITOR}
+monitor = DP-3
 monitor-strict = true
 dpi = 72
 bottom = true
@@ -102,8 +100,8 @@ module-margin-right = 2
 font-0 = hack:pixelsize=12;2
 font-1 = hack:pixelsize=10;2
 font-2 = hack:pixelsize=8;2
-font-3 = FontAwesome:pixelsize=12;2
-font-4 = FontAwesome:pixelsize=10;2
+font-3 = Font\ Awesome\ 5\ Free:pixelsize=12;2
+font-4 = Font\ Awesome\ 5\ Free:pixelsize=10;2
 
 modules-left = volume player_previous player_stop player_playpause player_next player_title
 modules-center = eth networkspeedup networkspeeddown

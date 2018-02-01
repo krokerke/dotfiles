@@ -5,7 +5,16 @@ if status --is-login
     end
 end
 
+if not functions -q fundle; eval (curl -sfL https://git.io/fundle-install); end
+
+fundle plugin 'tuvistavie/fish-ssh-agent'
+
+fundle init
+
+
 set PATH ~/.npm-global/bin $PATH
+set PATH ~/.gem/ruby/2.4.0/bin $PATH
+set PATH ~/.cargo/bin $PATH
 
 set normal (set_color normal)
 set magenta (set_color magenta)

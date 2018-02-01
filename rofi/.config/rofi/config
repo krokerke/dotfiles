@@ -10,14 +10,15 @@ rofi.lines:                          10
 rofi.columns:                        3
 ! Font to use
 rofi.font:                           mono 10
-! Color scheme for normal row
-rofi.color-normal:                   #282f39,#fffff,#303641,#1a8a74,#ffffff
-! Color scheme for urgent row
-rofi.color-urgent:                   #282f39,#fffff,#303641,#1a8a74,#ffffff
-! Color scheme for active row
-rofi.color-active:                   #282f39,#fffff,#303641,#1a8a74,#ffffff
-! Color scheme window
-rofi.color-window:                   #282f39,#1a8a74
+
+! State:           'bg',     'fg',     'bgalt',  'hlbg',   'hlfg'
+rofi.color-normal: #282f39,  #ffffff,  #303641,  #1a8a74,  #ffffff
+rofi.color-urgent: #282f39,  #ffffff,  #303641,  #1a8a74,  #ffffff
+rofi.color-active: #282f39,  #ffffff,  #303641,  #1a8a74,  #ffffff
+
+!                  'background', 'border', 'separator'
+rofi.color-window: #282f39,      #1a8a74,  #1a8a74
+
 ! Border width
 rofi.bw:                             2
 ! Location on screen
@@ -103,7 +104,7 @@ rofi.kb-primary-paste:               Control+Shift+v,Shift+Insert
 ! Paste clipboard
 rofi.kb-secondary-paste:             Control+v,Insert
 ! Clear input line
-rofi.kb-clear-line:                  Control+u
+rofi.kb-clear-line:                  
 ! Beginning of line
 rofi.kb-move-front:                  Control+a
 ! End of line
@@ -125,7 +126,7 @@ rofi.kb-remove-char-back:            BackSpace,Control+h
 ! Accept entry
 rofi.kb-accept-entry:                Control+j,Control+m,Return,KP_Enter
 ! Use entered text as command (in ssh/run modi)
-rofi.kb-accept-custom:               Control+Return,Shift+Return
+rofi.kb-accept-custom:               Control+Return
 ! Delete entry from history
 rofi.kb-delete-entry:                Shift+Delete
 ! Switch to the next mode.
@@ -137,11 +138,11 @@ rofi.kb-row-left:                    Control+Page_Up
 ! Go to the next column
 rofi.kb-row-right:                   Control+Page_Down
 ! Select previous entry
-rofi.kb-row-up:                      Up,Control+p,Shift+Tab,Shift+ISO_Left_Tab
+rofi.kb-row-up:                      Up,Control+p,Shift+ISO_Left_Tab
 ! Select next entry
 rofi.kb-row-down:                    Down,Control+n,Tab
 ! Go to next row, if one left, accept it, if no left next mode.
-rofi.kb-row-tab:                     Tab
+rofi.kb-row-tab:                     Shift+Tab
 ! Go to the previous page
 rofi.kb-page-prev:                   Page_Up
 ! Go to the next page

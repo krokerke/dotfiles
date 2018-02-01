@@ -7,8 +7,8 @@ set $mod Mod4
 set $alt Mod1
 
 # displays
-set $display1 HDMI-1
-set $display2 DVI-I-1
+set $display1 DP-3
+# set $display2 DVI-I-1
 
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -152,10 +152,8 @@ bindsym $mod+r mode "resize"
 #
 
 # bar
-exec --no-startup-id SHELL=$(which sh) MONITOR=$display1 polybar top
-exec --no-startup-id SHELL=$(which sh) MONITOR=$display2 polybar top
-exec --no-startup-id SHELL=$(which sh) MONITOR=$display1 polybar bottom
-exec --no-startup-id SHELL=$(which sh) MONITOR=$display2 polybar bottom
+exec_always --no-startup-id SHELL=$(which sh) MONITOR=$display1 polybar top
+exec_always --no-startup-id SHELL=$(which sh) MONITOR=$display1 polybar bottom
 
 # notifier
 exec --no-startup-id twmnd
@@ -181,7 +179,7 @@ exec unclutter-xfixes &
 bindsym $mod+n exec ~/.config/i3/i3-rename-workspace.py
 
 # autonaming tags => icons for opened windows
-exec_always ~/.config/i3/i3-autoname-workspaces.py &
+#exec_always ~/.config/i3/i3-autoname-workspaces.py &
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -228,3 +226,9 @@ client.unfocused        $base01 $base01 $base05 $base07 $base00
 client.urgent           $base08 $base08 $base05 $base07 $base08
 client.placeholder      $base00 $base00 $base05 $base00 $base00
 client.background       $base00
+
+bindsym $mod++Shift+p exec i3lock
+
+exec xautolock -time 5 -locker i3lock
+exec ssh-add ~/.ssh/id_rsa
+exec xset b off
