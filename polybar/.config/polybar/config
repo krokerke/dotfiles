@@ -39,7 +39,7 @@ throttle-input-for = 30
 screenchange-reload = true
 
 [bar/top]
-monitor = DP-3
+monitor = ${env:MONITOR}
 monitor-strict = true
 dpi = 72
 bottom = false
@@ -76,7 +76,7 @@ tray-transparent = true
 tray-background = #0063ff
 
 [bar/bottom]
-monitor = DP-3
+monitor = ${env:MONITOR}
 monitor-strict = true
 dpi = 72
 bottom = true
