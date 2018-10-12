@@ -313,3 +313,5 @@ noremap tt :tab split<CR>
 
 " config for fold-based sections
 " vim:foldmethod=marker:foldlevel=0
+"
+command JSONPretty execute "%!python -m json.tool"
